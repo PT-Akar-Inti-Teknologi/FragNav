@@ -56,6 +56,7 @@ class FragNavController constructor(private val fragmentManger: FragmentManager,
             field = value
             fragNavTabHistoryController = when (value) {
                 is UniqueTabHistoryStrategy -> UniqueTabHistoryController(DefaultFragNavPopController(), value.fragNavSwitchController)
+                is UniqueRootTabHistoryStrategy -> UniqueTabHistoryController(DefaultFragNavPopController(), value.fragNavSwitchController)
                 is UnlimitedTabHistoryStrategy -> UnlimitedTabHistoryController(DefaultFragNavPopController(), value.fragNavSwitchController)
                 else -> CurrentTabHistoryController(DefaultFragNavPopController())
             }

@@ -9,3 +9,5 @@ class CurrentTabStrategy : NavigationStrategy()
 class UnlimitedTabHistoryStrategy(val fragNavSwitchController: FragNavSwitchController) : NavigationStrategy()
 
 class UniqueTabHistoryStrategy(val fragNavSwitchController: FragNavSwitchController) : NavigationStrategy()
+
+class UniqueRootTabHistoryStrategy(val fragNavSwitchController: FragNavSwitchController) : NavigationStrategy()
